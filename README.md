@@ -1,16 +1,24 @@
-# hybridcomp
+# Flutter Hybrid Composition
 
-A demonstration of Flutter Hybrid Composition Library
+A demonstration of using [Hybrid Composition](https://github.com/flutter/flutter/wiki/Hybrid-Composition#android) facilities on Android platforms.
 
-## Getting Started
+## Background
+Starting from **Flutter 1.20.0**, hybrid composition can be used on Android. This new feature fixes [most of the issues](https://github.com/flutter/flutter/wiki/Android-Platform-Views#associated-problems-and-workarounds) with the existing platform view approach. In particular, **accessibility** and **keyboard** related issues.
 
-This project is a starting point for a Flutter application.
+In previous versions of Flutter, the application runs with an issue that the keyboard cannot pop up properly with native EditText included in Flutter plugins. Now, with Hybrid Composition, this issue has been fixed. Here is the link of the issue:
 
-A few resources to get you started if this is your first Flutter project:
+[https://github.com/flutter/flutter/issues/55046](https://github.com/flutter/flutter/issues/55046)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Purpose
+In this demonstration, we mainly illustrate how to pack an **EditText** into a Flutter plugin and represent it in a Flutter application.
+![](.github/demo.png)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Tests
+This demonstration has been tested on:
+
+- OnePlus 3T, Android 7.1.1
+- OnePlus 5, Android 7.1.1
+- OnePlus 7, Android 10
+- Pixel 3, Android 10
+- Android Emulator, Android 10

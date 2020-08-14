@@ -33,6 +33,7 @@
 
     <style name="DemoEditText">
         <item name="android:textSize">@dimen/demo_font_size</item>
+        <item name="android:singleLine">true</item>
     </style>
 
 </resources>
