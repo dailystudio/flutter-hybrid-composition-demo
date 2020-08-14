@@ -11,8 +11,8 @@ In previous versions of Flutter, the application runs with an issue that the key
 
 ## Purpose
 In this demonstration, we mainly illustrate how to pack an **EditText** into a Flutter plugin and represent it in a Flutter application.
-![](.github/demo.png)
 
+![](.github/demo.png)
 
 ## Tests
 This demonstration has been tested on:
