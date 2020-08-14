@@ -2,6 +2,7 @@ package com.dailystudio.flutter.hybridcomp
 
 import android.content.Context
 import android.graphics.Color
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.EditText
 import android.widget.TextView
@@ -12,19 +13,21 @@ import io.flutter.plugin.platform.PlatformView
 class NativeView(context: Context, id: Int,
                  @Nullable creationParams: Map<String?, Any?>?) : PlatformView {
 
-    private val textView: TextView
+    private val nativeView: View
 
     override fun getView(): View {
-        return textView
+        return nativeView
     }
 
     override fun dispose() {}
 
     init {
-        textView = EditText(context)
-        textView.textSize = 72f
-        textView.setBackgroundColor(Color.rgb(255, 255, 255))
-//        textView.text = "Rendered on a native Android view (id: $id)"
+        nativeView = LayoutInflater.from(context).inflate(R.layout.layout_native_view, null)
+        setupViews(nativeView)
+    }
+
+    private fun setupViews(nativeView: View?) {
+
     }
 
 }

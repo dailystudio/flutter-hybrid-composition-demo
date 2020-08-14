@@ -60,4 +60,8 @@ flutter {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    def appcompat_version = "1.2.0"
+
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
 }

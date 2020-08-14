@@ -8,8 +8,8 @@ class MainActivity : FlutterActivity() {
     @Override
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         flutterEngine
-                .getPlatformViewsController()
-                .getRegistry()
+                .platformViewsController
+                .registry
                 .registerViewFactory("hybrid-view-type", NativeViewFactory())
     }
 }
