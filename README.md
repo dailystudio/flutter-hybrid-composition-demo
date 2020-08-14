@@ -1,2 +1,3 @@
-# flutter_hybrid_composition_demo
-Demonstration of Flutter Hybird Composition Library
+# Flutter Hybrid Composition 
+
+A Quick Demonstration of Flutter Hybrid Composition Library
