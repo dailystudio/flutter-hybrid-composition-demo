@@ -15,6 +15,24 @@
     <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
         <item name="android:windowBackground">@android:color/white</item>
     </style>
+
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@android:color/white</item>
     </style>
+
+    <style name="DemoLabel">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/demo_font_size</item>
+        <item name="android:paddingTop">@dimen/demo_label_padding</item>
+        <item name="android:paddingBottom">@dimen/demo_label_padding</item>
+    </style>
+
+    <style name="DemoEditText">
+        <item name="android:textSize">@dimen/demo_font_size</item>
+    </style>
+
 </resources>

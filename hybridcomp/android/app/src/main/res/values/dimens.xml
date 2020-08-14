@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	
+	<dimen name="demo_font_size">18dp</dimen>
+	<dimen name="demo_label_padding">10dp</dimen>
+	<dimen name="demo_content_padding">20dp</dimen>
+
+</resources>

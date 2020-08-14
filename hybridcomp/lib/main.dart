@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Hybrid Composition',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Hybrid Composition'),
     );
   }
 }
@@ -74,27 +74,34 @@ class _MyHomePageState extends State<MyHomePage> {
     // Pass parameters to the platform side.
     final Map<String, dynamic> creationParams = <String, dynamic>{};
 
-    return PlatformViewLink(
-      viewType: viewType,
-      surfaceFactory:
-          (BuildContext context, PlatformViewController controller) {
-        return AndroidViewSurface(
-          controller: controller,
-          gestureRecognizers: const <Factory<OneSequenceGestureRecognizer>>{},
-          hitTestBehavior: PlatformViewHitTestBehavior.opaque,
-        );
-      },
-      onCreatePlatformView: (PlatformViewCreationParams params) {
-        return PlatformViewsService.initSurfaceAndroidView(
-          id: params.id,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: PlatformViewLink(
           viewType: viewType,
-          layoutDirection: TextDirection.ltr,
-          creationParams: creationParams,
-          creationParamsCodec: StandardMessageCodec(),
-        )
-          ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
-          ..create();
-      },
+          surfaceFactory:
+              (BuildContext context, PlatformViewController controller) {
+            return AndroidViewSurface(
+              controller: controller,
+              gestureRecognizers: const <Factory<OneSequenceGestureRecognizer>>{},
+              hitTestBehavior: PlatformViewHitTestBehavior.opaque,
+            );
+          },
+          onCreatePlatformView: (PlatformViewCreationParams params) {
+            return PlatformViewsService.initSurfaceAndroidView(
+              id: params.id,
+              viewType: viewType,
+              layoutDirection: TextDirection.ltr,
+              creationParams: creationParams,
+              creationParamsCodec: StandardMessageCodec(),
+            )
+              ..addOnPlatformViewCreatedListener(params.onPlatformViewCreated)
+              ..create();
+          },
+        ),
+      ),
     );
   }
 }
