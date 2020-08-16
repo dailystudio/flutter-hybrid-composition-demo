@@ -20,5 +20,8 @@ This demonstration has been tested on:
 - OnePlus 3T, Android 7.1.1
 - OnePlus 5, Android 7.1.1
 - OnePlus 7, Android 10
-- Pixel 3, Android 10
+- Xiaomi MIX 2, Android 8.0.0
+- Xiaomi CC 9, Android 9
+- Google Nexus 5X, Android 8.0.0
+- Google Pixel 3, Android 10
 - Android Emulator, Android 10
